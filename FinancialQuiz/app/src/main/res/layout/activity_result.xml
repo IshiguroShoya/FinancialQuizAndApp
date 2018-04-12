@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ishiguro.financialquiz.ResultActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#4169e1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="100px" />
+
+        <TextView
+            android:id="@+id/ResultTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="結果"
+            android:textSize="42px"
+            android:background="#4169e1"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="32px" />
+        
+        <TextView
+            android:id="@+id/ResultSubText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="あなたはX問中、X問正解しました。"
+            android:textSize="42px"
+            android:background="#4169e1"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/commentText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="42px"
+            android:background="#4169e1"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"
+            android:text="あなたの知能はX人並みです！"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30px" />
+        <TextView
+            android:id="@+id/comment2Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="42px"
+            android:background="#4169e1"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"
+            android:text="次は、あなたに最適な運用プランを診断しましょう！"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30px" />
+        <Button
+            android:id="@+id/nextSimulationBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:textColor="#4169e1"
+            android:layout_gravity="center_horizontal"
+            android:text="診断開始　＞"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

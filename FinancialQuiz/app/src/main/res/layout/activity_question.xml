@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ishiguro.financialquiz.QuestionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ageText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="60px"
+            android:textColor="@android:color/black"
+            android:text="あなたの年齢は？"/>
+
+        <Spinner
+            android:id="@+id/ageSpinner"
+            android:layout_width="200px"
+            android:layout_height="wrap_content">
+        </Spinner>
+
+        <TextView
+            android:id="@+id/QuestionDepositText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="60px"
+            android:text="毎月の積立額は？"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+          android:orientation="horizontal">
+            <EditText
+                android:id="@+id/QuestionDepositEdit"
+                android:layout_width="300px"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="金額を入力"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50px"
+                android:text="円"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/assetText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="60px"
+            android:text="金融資産はおおよそいくらですか？"/>
+
+        <Spinner
+            android:id="@+id/assetSpinner"
+            android:layout_width="400px"
+            android:layout_height="wrap_content">
+        </Spinner>
+
+        <TextView
+            android:id="@+id/purposeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="60px"
+            android:text="資産運用の目的は？"/>
+
+        <Spinner
+            android:id="@+id/purposeSpinner"
+            android:layout_width="700px"
+            android:layout_height="wrap_content">
+        </Spinner>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50px"/>
+
+        <Button
+            android:id="@+id/nextSimulationActivityBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/white"
+            android:background="#4169e1"
+            android:text="次へ"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

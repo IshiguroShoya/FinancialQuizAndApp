@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ishiguro.financialquiz.SimulationActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/SimulationPieTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="あなたに最適なポートフォリオ"
+                android:textSize="48px"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/SimulationPieSubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下記の上場投資信託(ETF)を購入することをお勧めします"
+                android:layout_gravity="center_horizontal" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/SimulationPieChart"
+                android:layout_width="match_parent"
+                android:layout_height="800px"
+                android:layout_gravity="center" />
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:shrinkColumns="1">
+
+                <TableRow
+                    android:id="@+id/tableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="ETF名"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="ETFの説明"/>
+                </TableRow>
+            </TableLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="60px" />
+            
+            <TextView
+                android:id="@+id/SimulationLineTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="48px"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@android:color/black"
+                android:text="資産の予想増加率"/>
+
+            <TextView
+                android:id="@+id/AssetExpectation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="28px"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@android:color/black"
+                android:text="X年後に投資元本X円がX円になります。"/>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/SimulationLineChart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/yearText"
+                android:layout_width="match_parent"
+                android:layout_height="50px"
+                android:text="積立年数：X年"/>
+
+            <SeekBar
+                android:id="@+id/SeekBar_year"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:progress="20"
+                android:max="50">
+            </SeekBar>
+
+            <TextView
+                android:id="@+id/DepositText"
+                android:layout_width="match_parent"
+                android:layout_height="50px"
+                android:text="毎月の積立金：X円"/>
+
+            <EditText
+                android:id="@+id/DepositEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="毎月の積立てる金額を入力してください。"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
